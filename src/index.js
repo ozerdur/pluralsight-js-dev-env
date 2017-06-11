@@ -1,12 +1,12 @@
+import './index.css';
 
 import {getUsers, deleteUser} from './api/userApi';
 
-//Populate table of users via API call.
-
-getUsers().then(result=>{
+// Populate table of users via API call.
+getUsers().then(result => {
   let usersBody = "";
 
-  result.forEach(user=>{
+  result.forEach(user => {
     usersBody+= `<tr>
       <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
       <td>${user.id}</td>
